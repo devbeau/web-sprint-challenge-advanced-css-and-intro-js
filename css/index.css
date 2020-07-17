@@ -14,7 +14,7 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {  
 margin: 0;  
 padding: 0;  
-border: 0;  
+border: 1px solid lightgrey;  
 font-size: 100%;  
 font: inherit;  
 vertical-align: baseline;  
@@ -49,8 +49,9 @@ a:hover {
     font-size: 150%;	
     font-weight: 200;	
 }	
-img {	
-    height:39rem;	
+img {
+    width: 35%;	
+    height: 39%;	
     object-fit: cover;	
     display: block;	
     margin: 2%;	
@@ -133,4 +134,123 @@ button:hover{
 }
 .artist img{
     width:100%;
+}
+
+
+@media (max-width: 1000px){
+    button{
+        padding:2% 3%;
+        font-size: 2.0rem;
+        border-radius:6px;
+        border:2px solid #626262;
+        box-shadow: 2px 2px 1px #626262;
+        transition: 2s;
+    }
+
+    .artists-container{
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-evenly;
+        margin: 0 auto;
+        
+    }
+    .artist img{
+        width:100%;
+    }
+    .artist{
+        display:flex;
+        flex-direction: column;
+        width: 40%;
+    }
+    .artist p{
+        width: 100%;
+        
+    }
+}
+@media (max-width: 800px){
+    /*Nav Styling*/
+    header nav{
+        width: 70%;
+    }
+
+    /* Title Section Styling */
+    .title-container div{
+        width: 90%;
+        height: 40vh;
+    }
+    .title-container h1{
+        font-size: 4.6rem;
+    }
+    button{
+        padding:3% 4%;
+        font-size: 2.0rem;
+        border-radius:6px;
+        border:2px solid #626262;
+        box-shadow: 2px 2px 1px #626262;
+        transition: 2s;
+    }
+    /* Artists Section Styling */
+    .artists-container{
+        flex-direction: column;
+        width: 80%;
+        
+    }
+    .artist img{
+        width:60%;
+        height: auto;
+    }
+    .artist{
+        display:flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .artist p{
+        width: 100%;
+        height: 20vh;
+    }
+}
+
+/* 500px Breakpoint */
+@media (max-width: 500px){
+    /*Nav Styling*/
+    header nav{
+        width: 70%;
+    }
+
+    /* Title Section Styling */
+    .title-container div{
+        width: 100%;
+        height: 40vh;
+    }
+    .title-container h1{
+        font-size: 4.6rem;
+    }
+    button{
+        margin-top: 2%;
+        padding:5% 6%;
+        font-size: 2.5rem;
+        border-radius:6px;
+        border:2px solid #626262;
+        box-shadow: 2px 2px 1px #626262;
+        transition: 2s;
+    }
+    /* Artists Section Styling */
+    .artists-container{
+        flex-direction: column;
+        width: 80%;
+        
+    }
+    .artist img{
+        width:100%;
+        height: 25vh;
+    }
+    .artist{
+        display:flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .artist p{
+        width: 100%;
+        height: 20vh;
+    }
 }
