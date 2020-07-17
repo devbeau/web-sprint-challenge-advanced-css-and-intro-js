@@ -198,7 +198,7 @@ const artists = [
       "bio": "Albrecht Dürer (; German: [ˈʔalbʁɛçt ˈdyːʁɐ]; 21 May 1471 – 6 April 1528) sometimes spelt in English as Durer or Duerer, without umlaut, was a painter, printmaker, and theorist of the German Renaissance. Born in Nuremberg, Dürer established his reputation and influence across Europe when he was still in his twenties due to his high-quality woodcut prints.",
       "wikipedia": "http://en.wikipedia.org/wiki/Albrecht_Dürer",
       "paintings": 328
-    }
+    },
 ]
 
 // 🖌🖼 M V P 🖼🖌 //
@@ -268,6 +268,7 @@ function removeArtist(array, index) {
 /* Task 6: Create a function called `addArtist` that can accept an object of information and add it to the artists array. Then, add a 21st artist to the array (you) with custom information!👩‍🎨👨‍🎨
 
 For example, you could add the following information: 
+{}
 id: 20,
 name: Your Name Here, 
 years: Your Birth Year - current day,
@@ -278,19 +279,20 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 At the end, this function should return the new array with information added"*/
 
 function addArtist(array, id, name, years, genre, nationality, bio){
-  array.push({
-    id: id,
-    name: name,
-    years: years,
-    genre: genre,
-    nationality: nationality,
-    bio: bio,
-  });
-
+  const obj = {
+    "id": id,
+    "name": name,
+    "years": years,
+    "genre": genre,
+    "nationality": nationality,
+    "bio": bio,
+  };
+  array.push(obj);
+  console.log(array);
   return array;
   }
 
-console.log("This is task 6:", addArtist(artists, 20, "Beau", "1986 - 2020", "avant garde", "American", "There's a soup in my fly"));
+console.log("This is task 6:", addArtist(artists, 20, "Beau", "1986 - 2020", "Web Design", "American", "There's a soup in my fly"));
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
     (1) artists array 
@@ -339,7 +341,7 @@ The function should console.log 50 chunks of HTML code that match the structure 
 
 /* STRETCH 2: Create a function called `randomize` that takes a data array as an argument and returns a the same array in a randomized order. */
 
-function randomize(array){
+function randomize(...array){
 const returnArray = [];
 let ranNum;
 let i = 0;
@@ -355,4 +357,26 @@ return returnArray;
   }
 
 console.log("This is stretch 2:", randomize(artists));
+
  /* STRETCH 3: Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */
+
+/* const filteredArray = artists.filter(function (){
+
+   if Number(this.years.split
+   
+ })
+
+function get20s(array){
+  const intDatesArray = [];
+  const returnArray = [];
+    for (i = 0;i < array.length; i++){
+      intDatesArray.push(array[i].years.split(" - "));
+        if(Number(intDatesArray[i][0]) > 1900 && Number(intDatesArray[i][1]) < 2000){
+          returnArray.push(array[i].name);
+        }
+      }
+    
+    return returnArray;
+  } 
+*/
+  
